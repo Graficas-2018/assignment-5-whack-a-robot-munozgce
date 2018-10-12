@@ -1,0 +1,103 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Three.js Morph targets</title>
+
+<link rel="stylesheet" href="../libs/jquery-ui/jquery-ui.css" />
+<link rel="stylesheet" href="../libs/colorpicker/css/colorpicker.css" />
+<link rel="stylesheet" href="../css/main.css" />
+<link rel="stylesheet" href="../css/threejsshadows.css" />
+
+<script src="../libs/jquery-3.3.1/jquery-3.3.1.js"></script>
+<script src="../libs/jquery-ui/jquery-ui.js"></script>
+
+<script src="../libs/three.js/three.js"></script>
+<script src="../libs/three.js/controls/OrbitControls.js"></script>
+<script src="../libs/colorpicker/js/colorpicker.js"></script>
+
+<script src="../libs/three.js/loaders/GLTFLoader.js"></script>
+
+<script src="../libs/three.js/loaders/inflate.min.js"></script>
+<script src="../libs/three.js/loaders/FBXLoader.js"></script>
+
+<script src="../libs/keyframe.js/keyframe.js"></script>
+
+<script src="whackARobot.js"></script>
+
+<script type="text/javascript">
+
+
+
+
+function initControls()
+{
+    $("input[name=animation]").click(
+        function() {
+            var id = $("input[name=animation]:checked").attr('value');
+            changeAnimation(id);
+        }
+    );
+
+}
+
+</script>
+
+
+
+
+<script type="text/javascript">
+
+	$(document).ready(
+			function() {
+
+				var canvas = document.getElementById("webglcanvas");
+
+				// create the scene
+				createScene(canvas);
+
+				// initialize the controls
+				initControls();
+
+		        // Run the run loop
+		        run();
+			}
+	);
+
+</script>
+
+	<style>
+body {background-color: black;}
+h1   {color: blue;}
+div    {color: red;}
+button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div id="container">
+	<button id="start" onclick="star()">start</button>
+	<button id="restart" onclick="restart()">restart</button>
+	<div id="highscore">-</div>
+	<div id="timer">-</div>
+    <canvas id="webglcanvas" width=1000 height=900></canvas>
+	<div id="score">-</div>
+
+</div>
+
+¡
+
+</body>
+
+
+</html>
