@@ -11,3 +11,11 @@ Rubric:
 3. The user can interact correctly with the 3D model, and when an interaction happens, the *dead* animation is played. The model is then erased from the scene after a little while.
 4. A high score and timer are correctly implemented.
 5. UI feedback messages (to start or restart the game) are correctly displayed.
+
+**NOTES**
+
+1. Only one robot appears, and it does not behave correctly.
+2. The animation that runs when clicked does not work properly.
+3. The start button does nothing, and the timer does not work.
+
+**Grade: 70**
